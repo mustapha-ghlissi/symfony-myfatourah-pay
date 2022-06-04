@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}
+  AUVT | الوعد المنجز
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid adhesion_titer">
+    <h2 class="display-4 text-center text-light pt-5">الوعد المنجز | Promise done</h2>
+</div>
+
+<div class="container text-center">
+        <img src="{{ asset('../uploads/logo_uvta_horisontal.png')}}" width="40%" alt="logo">
+</div>
+<div class="card shadow col-md-6 mx-auto mb-5">
+   <h2 class="text-center text-secondary mt-5">اختر الانتهاء</h3>
+    <div class=" d-flex flex-column mb-5">
+        <p class="text-center text-secondary my-3">100 ريال</p>
+        <p class="text-center text-secondary my-3">300 ريال</p>
+        <p class="text-center text-secondary my-3">10000 ريال</p>
+    </div>
+    {{ form_start(formPromise)}}
+        <div class="col-md-4 mx-auto text-center mb-5 rounded">
+        {{ form_row(formPromise.amount, {label: 'الخاص بك القيام به'})}}
+        </div>
+        <div class="form-group text-center mb-5">
+            {{ form_widget(formPromise.save) }}
+            {{ form_widget(formPromise.pay) }}
+        </div>
+    {{ form_end(formPromise)}} 
+</div>
+{% endblock %}

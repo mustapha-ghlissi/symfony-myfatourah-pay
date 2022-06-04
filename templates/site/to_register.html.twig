@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  AUVT | للتسجيل 
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid register_titer">
+   <h1 class="display-2 text-center text-light pt-5">سجل نفسك</h1>  
+</div>
+ <div class="container">
+      <h2 class="text-center mt-5" id="register_form">جمعية تقنيات المركبات المسيرة</h2>
+
+ 
+      <div class="col-md-6 mx-auto">
+
+         {{ form_start(form) }}
+            <div class="row col-md-12 d-flex justify-content-center mt-5">
+               <div class="col-md-5"> {{ form_row(form.first, {'label': 'الاسم الاول  | First name', 'attr': {'placeholder': 'Please enter your first name'}}) }}</div>
+               <div class="col-md-5">{{ form_row(form.last, {'label': 'اسم العائلة | Last name', 'attr': {'placeholder': 'Please enter your name'}}) }}</div>
+               <div class="col-md-10">{{ form_row(form.country, {'label': 'الدولة | Country', 'attr': {'placeholder': "Please enter your country"}}) }}</div>
+               <div class="col-md-10">{{ form_row(form.city, {'label': 'المدينة | City'}) }}</div>
+               <div class="col-md-10"> {{ form_row(form.age, {'label': 'العمر  | Age', 'attr': {'placeholder': 'Please enter your age'}}) }}</div>
+               <div class="col-md-10">{{ form_row(form.education, {'label': 'التعليم | Education'}) }}</div>
+               <div class="col-md-10">{{ form_row(form.specialization, {'label': 'التخصص الدراسي | Specialization', 'attr': {'placeholder': "Your specialization"}}) }}</div>
+               <div class="col-md-10">{{ form_row(form.purpose, {'label': 'هل تريد الانضمام للجمعية ؟ |Would you like join the Association'}) }}</div>
+               <div class="col-md-10"> {{ form_row(form.email, {'label': 'البريد الالكتروني | Email', 'attr': {'placeholder': 'Please enter your email'}}) }}</div>
+               <div class="col-md-10">{{ form_row(form.phone, {'label': 'رقم الجوال | Phone', 'attr': {'placeholder': 'Please enter your phone number'}}) }}</div>
+               <div class="col-md-10">{{ form_row(form.comunication, {'label': 'طريقة التواصل المفضلة | Comunication methode'}) }}</div>
+               <div class="col-md-10">{{ form_row(form.password, {'label': 'شعار |Password'}) }}</div>
+               <button type="submit" class="btn btn-secondary my-3 col-md-3">إرسال | Submit  </button>
+            </div>
+         {{ form_end(form) }}
+         
+      </div>
+             
+
+
+   </div>   
+
+
+{% endblock %}

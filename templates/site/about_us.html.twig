@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  AUVT | من نحن  
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid about_titer">
+    <h1 class="display-2 text-center text-light pt-5">من نحن</h1>
+</div>
+<div class="container about_text">
+    <p class="col-xl-10 mx-auto mt-5 text-center">جمعية سعودية تعنى بتطوير تقنيات المركبات المسيرة عن بعد بأقسامها الجوية والبرية والبحرية والمساهمة في المجهود الوطني لتوظيف هذه التقنيات في الحياة العامة ونشر المعرفة المتعلقة بها</p>
+</div>
+<div class="container-fluid d-flex two_section">
+    <div class="about_green col-xl-6 col-md-6">
+      <div class="container text-end mt-5 me-5">
+        <h2 class="display-5 text-light">رؤية الجمعية</h2>
+        <p class="text-light">أن تكون مرجع وطني وعالمي وأداة فاعلة في تأسيس تقنيات</p>
+        <p class="text-light">المركبات المسيرة بأقسامها المختلفة.</p>
+      </div>
+    </div>
+    <div class="about_bleu col-xl-6 col-md-6">
+      <div class="container text-end mt-5 me-5">
+        <h2 class="display-5 text-light">رسالة الجمعية</h2>
+            <p class="text-light">استثمار القدرات الوطنية لتطوير صناعة وتقنيات المركبات المسيرة</p>
+            <p class="text-light">و نشر المعرفة المرتبطة بها.</p>
+      </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-evenly">
+        <div class="col-lg-3 about_administration d-flex flex-column my-5">
+            <h4 class="text-light text-center my-auto">مجلس الإدارة</h4>
+            <a class="text-center mb-3" href="{{ path('pdg')}}" target="blanc"><i class="bi bi-arrow-right text-light"></i></a>
+        </div>
+        <div class="col-lg-3 about_direction d-flex flex-column my-5">
+            <h4 class="text-light text-center my-auto">الفريق التنفيذي</h4>
+            <a class="text-center mb-3" href="{{ path('direction')}}" target="blanc"><i class="bi bi-arrow-right text-light"></i></a>
+        </div>
+        <div class="col-lg-3 about_membres d-flex flex-column my-5">
+             <h4 class="text-light text-center my-auto">الأعضاء المؤسسين</h4>
+            <a class="text-center mb-3" href="#" target="blanc"><i class="bi bi-arrow-right text-light"></i></a>
+        </div>
+    </div>    
+</div>
+
+
+{% endblock %}

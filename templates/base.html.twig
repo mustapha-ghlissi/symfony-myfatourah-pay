@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {# put balises meta #}
+
+        {# Run `composer require symfony/webpack-encore-bundle`
+           and uncomment the following Encore helpers to start using Symfony UX #}
+        {% block stylesheets %}
+            {#{{ encore_entry_link_tags('app') }}#}
+        {% endblock %}
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{asset('../css/site.css')}}">
+        <link type="image/gif" rel="icon" href="{{ asset('../uploads/logo.jpg')}}">
+
+
+    </head>
+    <body>
+    {# debut header #}
+        <header>
+            <div class="container-fluid text-center ">
+                <div class="d-flex flex-wrap align-items-center justify-content-center my-3">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                    <div class="container-fluid">
+                        <p class="nav-item text-info"><a href="{{ path('home')}}" class="nav-link px-5 text-info link-dark"><img src="{{ asset('/uploads/logo.jpg')}}" alt="logo" width="100px"></a></p>
+                            <button class="navbar-toggler text-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon text-info"></span>
+                            </button>
+
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                                <ul class="navbar-nav col-12 col-md-auto my-2 justify-content-center mb-md-0">
+                                    
+                                    <li class="nav-item"><a href="{{ path('home')}}" class="nav-link px-5"><p class="nav-titer">استقبال</p></a></li>
+                                    <li class="nav-item dropdown"><a href="{{ path('about_us')}}" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle px-5">
+                                    <p class="nav-titer">من نحن</p></a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="{{ path('about_us')}}"><p class="nav-titer">من نحن</p></a></li>
+                                                <li><a class="dropdown-item" href="{{ path('pdg')}}"><p class="nav-titer">أعضاء مجلس الإدارة</p></a></li>
+                                                <li><a class="dropdown-item" href="{{ path('direction')}}"><p class="nav-titer">الفريق التنفيذي</p></a></li>
+                                                {# <li><a class="dropdown-item" href="{{ path('membres')}}"><p class="nav-titer">الأعضاء المؤسسين للجمعية</p></a></li> #}
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item"><a href="{{ path('domain')}}" class="nav-link px-5"><p class="nav-titer">مجالنا</p></a></li>
+                                    <li class="nav-item"><a href="{{ path('services')}}" class="nav-link px-5"><p class="nav-titer">خدماتنا</p></a></li>
+                                    <li class="nav-item"><a href="{{ path('contact')}}" class="nav-link px-5"><p class="nav-titer">اتصل بنا</p></a></li>
+                                    <li class="nav-item"><a href="{{ path('to_register')}}" class="nav-link px-5"><p class="nav-titer">للتسجيل</p></a></li>
+                                    
+                                     {% if app.user %}
+                                
+                                        {% if is_granted('ROLE_ADMIN') %}
+                                        <li class="nav-item"><a href="{{path('admin')}}" class="nav-link px-5"><p class="nav-titer">Backoffice</p></a></li>
+                                        {% endif %} 
+                                        <li class="nav-item"><a class="nav-link px-5" href="{{path('app_logout')}}"><p class="nav-titer">Log out</p></a></li>
+                                        
+                                        <li class="nav-item"><a href="{{ path('profile')}}" class="nav-link px-5"><p><i class="bi bi-person-circle"></i></p></a></li>
+
+                                    {% else %}
+                                        
+
+                                        <li class="nav-item"><a class="nav-link px-5" href="{{path('app_login')}}"><p class="nav-titer">Sign Up</p></a></li>
+
+                                    {% endif %} 
+                                    </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            </div>
+        </header>
+        {# main #}
+        <main>
+            {% block body %}
+            
+            {% endblock %}
+        </main>
+        {# footer #}
+        <footer>
+            <div class="container-fluid footer_base">
+                <div dir="rtl" class="d-flex flex-wrap align-items-center justify-content-evenly">
+                    <div class="d-flex mt-5">
+                        <ul class="nav d-flex nav_footer ">
+                            <li><a href="{{ path('home')}}" class="nav-link"><p class="nav-titer">استقبال</p></a></li>
+                            <li><a href="{{ path('about_us')}}" class="nav-link"><p class="nav-titer">من نحن</p></a></li>
+                            <li><a href="{{ path('domain')}}" class="nav-link"><p class="nav-titer">مجالنا</p></a></li>
+                            <li><a href="{{ path('services')}}" class="nav-link"><p class="nav-titer">خدماتنا</p></a></li>
+                            <li><a href="{{ path('contact')}}" class="nav-link"><p class="nav-titer">اتصل بنا</p></a></li>
+                            <li><a href="{{ path('to_register')}}" class="nav-link"><p class="nav-titer">للتسجيل</p></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="nav d-flex mt-5">
+                            <li class="mx-3"><a href="https://www.linkedin.com/company/auvt/?viewAsMember=true" target="blanc"><i class="bi bi-linkedin"></i></a></li>
+                            <li class="mx-3"><a href="https://twitter.com/auvt_org" target="blanc"><i class="bi bi-instagram"></i></a></li>
+                            <li class="mx-3"><a href="https://www.instagram.com/auvt_org/" target="blanc"><i class="bi bi-twitter"></i></a></li>  
+                        </ul>
+                        <p class="text-center copy_right">SAUDI ARABIA, Jeddah</p>
+                    </div>
+
+                </div>
+                <div>
+                    <p  class="text-center my-3 copy_right">Copyright 2021 &copy; AUVT</p>      
+                </div>
+            </div>   
+        </footer>
+
+        
+        {% block javascripts %}
+            {#{{ encore_entry_script_tags('app') }}#}
+        {% endblock %}
+        <!-- JavaScript Bundle with Popper bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

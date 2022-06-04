@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-titer,.home_agencie_titer {
+    color: #014f86;
+    font-weight: bold;
+
+} 
+
+.nav-tog {
+    color:#014f86;
+}
+
+.copy_right {
+    color:#014f86;
+}
+.bi {
+    font-size: 2em;
+    color: #014f86;
+}
+
+main {
+    min-height: 500px !important;
+}
+
+.footer_base {
+    border-top:#014f86 solid ;
+
+}
+
+
+.home_video {
+  height: 500px;
+  background-image: url(../uploads/bannier_1.png);
+  background-size: cover;
+  background-position: center;
+  padding-left: 0;
+  padding-right: 0;
+   
+}
+
+.home_banner_2 {
+    height: 400px;
+    background-image: url(../uploads/bannier_2.png);
+    background-size: cover;
+    background-position: center;
+}
+
+p {
+    font-size: 17px;
+    line-height: 2em;
+}
+/* css about_us */
+.about_titer {
+    height: 200px;
+    background-image: url(../uploads/bannier_1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.about_text {
+    height: 150px;
+}
+.two_section {
+    
+    background-image: url(../uploads/bannier_4.jpg);
+}
+.about_bleu {
+    height: 250px; 
+    background-image: url(../uploads/bannier_4.jpg);
+    background-size: cover;
+    
+    
+}
+
+.about_green {
+    height: 250px;
+    background-image: url(../uploads/bannier3.jpg);
+    background-size: cover;      
+}
+
+.about_administration {
+    width: 200px;
+    height: 200px;
+    background-image: url(../uploads/bannier3.jpg);
+    background-size: cover;
+
+}
+.about_name {
+    font-weight: bold;
+}
+.about_p {
+    color: #014f86;
+}
+
+.about_direction {
+    width: 200px;
+    height: 200px;
+    background-image: url(../uploads/bannier_2.png);
+    background-size: cover;
+}
+.about_membres {
+    width: 200px;
+    height: 200px;
+    background-image: url(../uploads/bannier_1.png);
+    background-size: cover;
+}
+/* css contact_us */
+
+.contact_titer {
+    height: 200px;
+    background-image: url(../uploads/bannier_2.png);
+    background-size: cover;
+}
+#contact_form, #register_form {
+    color:#83919b ;
+}
+
+/* css our_domain */
+
+.domain_titer {
+    height: 200px;
+    background-image: url(../uploads/bannier3.jpg);
+    background-size: cover;
+}
+.domain_p {
+    line-height: 1em;
+}
+/* css our_services  */
+.services_titer {
+    height: 300px;
+    background-image: url(../uploads/gratteciel.jpg);
+    background-size: cover;
+
+}
+.services_p {
+    line-height: 1em;
+    font-weight: bold;
+    font-size: 20px;
+} 
+.register_titer {
+    height: 200px;
+    background-image: url(../uploads/bannier_1.png);
+    background-size: cover;
+}
+
+/* css profile */
+.profile_titer {
+    height: 200px;
+    background-image: url(../uploads/bannier_3.png);
+    background-size: cover;
+}
+
+.btn_adhesion {
+    color: #014f86;
+    text-decoration: none;
+}
+.adhesion_titer {
+    height: 200px;
+    background-image: url(../uploads/bannier_1.png);
+    background-size: cover;
+}
+.adhesion_card {
+    background-image: url(../uploads/bannier_5.png);
+    background-size: cover;
+}
+
+

@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  AUVT |  مجالنا 
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid domain_titer">
+    <h1 class="display-2 text-center text-light pt-5">مجالات عمل الجمعية</h1>
+</div>
+<div class="container">
+    <div class="row my-5"> 
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center">
+            <img class="mx-auto" src="{{ asset('../uploads/domain_images/domain_1.png')}}" width="200" alt="message">
+            <p class="text-center domain_p">إجراء الدراسات والأبحاث</p>
+            <p class="text-center domain_p">والإستشارات</p>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center">
+            <img class="mx-auto" src="{{ asset('../uploads/domain_images/domain_4.png')}}" width="200" alt="drone">
+            <p class="text-center domain_p">الطائرات المسيرة</p>
+            <p class="text-center domain_p">بدون طيار</p>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center">
+            <img class="mx-auto" src="{{ asset('../uploads/domain_images/domain_2.png')}}" width="200" alt="system_communication">
+            <p class="text-center domain_p">أنظمة الاتصالات</p>
+            <p class="text-center domain_p">بالمركبات المسيرة</p>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center">
+            <img class="mx-auto" src="{{ asset('../uploads/domain_images/domain_5.png')}}" width="200" alt="production">
+            <p class="text-center domain_p">تصميم وتصنيع</p>
+            <p class="text-center domain_p">المركبات المسيرة</p>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center">
+            <img class="mx-auto" src="{{ asset('../uploads/domain_images/domain_3.png')}}" width="200" alt="control">
+            <p class="text-center domain_p">التحكـــــم</p>
+            <p class="text-center domain_p">بالمركبات المسيرة</p>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center">
+            <img class="mx-auto" src="{{ asset('../uploads/domain_images/domain_6.png')}}" width="200" alt="boat">
+            <p class="text-center domain_p">القوارب والغواصات</p>
+            <p class="text-center domain_p">والمركبات المسيرة عن بعد</p>
+        </div>
+        
+    </div>
+</div>
+
+
+{% endblock %}

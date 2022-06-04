@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  AUVT | ملفي الشخصي 
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid profile_titer">
+    <h2 class="display-4 text-center text-light pt-5">ملفي الشخصي | My profile</h2>
+</div>
+<div class="container">
+        <div class="card rounded shadow col-md-8 mx-auto mt-5">
+             <div class="d-flex flex-wrap ">
+                <p class="col-md-6 text-center mx-auto">My First name : {{ app.user.first }}</p>
+                <p class="col-md-6 text-center mx-auto">My Last name : {{ app.user.last}}</p>
+                <p class="col-md-6 text-center mx-auto">My country : {{ app.user.country}}</p>
+                <p class="col-md-6 text-center mx-auto">My city : {{ app.user.city}}</p>
+                <p class="col-md-6 text-center mx-auto">{{ app.user.age}} : My age</p>
+                <p class="col-md-6 text-center mx-auto">{{ app.user.education}} : My education level </p>
+                <p class="col-md-6 text-center mx-auto">My specialization :{{ app.user.specialization}}</p>
+                <p class="col-md-6 text-center mx-auto">{{ app.user.email}} : My email</p>
+                <p class="col-md-6 text-center mx-auto">My phone :{{ app.user.phone}}</p>
+                <p class="col-md-6 text-center mx-auto">{{ app.user.comunication}} : My method of communication</p>
+                
+            </div> 
+        </div>
+        <div class="col-md-6 mx-auto text-center my-5">
+        {# connect with user ID #}
+            <a href="{{ path('promise_done', {'id': app.user.id})}}" target="blanc" class="btn-lg text-center border rounded-pill shadow btn_adhesion">عضوية الجمعية | Adhesion a association</a>
+        </div>
+
+</div>
+
+{% endblock %}

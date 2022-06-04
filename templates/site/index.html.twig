@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  AUVT | جمعية تقنية المركبات المسيرة 
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid home_video">
+{# video ne marche pas ! #}
+    <video autoplay loop height="500px" width="100%" class="container-fluid">
+      <source src="#">
+    </video>
+</div>
+<div class="container text-center">
+      <img src="{{ asset('/uploads/logo_2.png')}}" width="40%" alt="logo">
+      <div class="col-xl-8 col-md-10 text-center mx-auto">
+        <p>تمثل تقنيات المركبات المسيرة عن بعد ثورة كبيرة في مجال تقنيات النقل والخدمات وتتنوع من حيث الاستخدام الى ثلاثة اقسام رئيسية (الجوية والبرية والبحرية) وتمثل الطائرات بدون طيار (الدرونز) أسرع تلك التقنيات تطوراً واعتمادية في الوقت الراهن ويتوقع لها مستقبل مزدهر وتطبيقات متنوعة وأساسية
+        </p>
+      </div> 
+      <div class="col-md-10 text-center mx-auto">
+        <div class="col-md-6 mx-auto my-5">
+            <a href="{{ path('to_register')}}" target="blanc" class="btn-lg text-center border rounded-pill shadow btn_adhesion">سجل نفسك | Register</a>
+        </div>
+      
+      </div>  
+</div>
+
+<div class="container-fluid home_banner_2">
+    <div class="container col-xl-6 col-md-10">
+      <h3 class="text-light text-end my-5 pt-5">لماذا تقنية المركبات المسیرة؟
+      </h3>
+      <p class="text-light text-end">
+تجمع تقنية المركبات المسيرة منظومة تقنيات متعددة تعتبر أدوات المستقبل للتطور التقني فتجمع هذه التقنية: الذكاء الاصطناعي تعلم الآلة وإنترنت الأشياء بجانب تقنية الروبوتكس.
+إن تقنيات المركبات المسيرة عن بعد ستلعب دوراً كبيراً في مسيرة التطور بالمملكة العربية السعودية في الجوانب التقنية والاقتصادية والخدمية والأمنية، لذا فإن هذه التقنيات تستدعي الشراكة مع المجتمع العلمي والاقتصادي والأساتذة والعلماء والمتخصصين لإيجاد حلول لكل المعضلات والعوائق التي تعترض طريق هذه التقنيات.
+
+ 
+</p>
+    </div>
+</div>
+<div class="container col-xl-6 col-md-10">
+      <h3 class="text-center home_agencie_titer py-5">لجهات الحكومية المرتبطة بنشاط الجمعية
+      </h3>
+      <div class="card shadow mb-5"> 
+          <div class="d-flex justify-content-evenly card_ministry">
+              <div class="mx-3 my-3 ">
+                <img class="card-img-top border border-2 rounded-circle shadow" src="{{ asset('/uploads/mdcdti.jpg')}}" width="200" alt="logo_ministry"> 
+                    <p class="text-center mt-3">وزارة الاتصالات وتقنية المعلومات</p>  
+              </div>
+              <div class="mx-3 my-3">
+                <img class="card-img-top border border-2 rounded-circle shadow" src="{{asset('/uploads/min_transport.jpg')}}" width="200" alt="logo_ministry">
+                    <p class="text-center mt-3">وزارة النقل</p>
+              </div>
+              <div class="mx-3 my-3 ">
+                <img class="card-img-top border border-2 rounded-circle shadow" src="{{ asset('/uploads/mlsd.jpg')}}" width="200" alt="logo_ministry">
+                    <p class="text-center mt-3">وزارة الموارد البشرية والتنمية الإجتماعية</p>
+              </div>
+          </div>     
+      </div>
+</div>
+
+
+{% endblock %}

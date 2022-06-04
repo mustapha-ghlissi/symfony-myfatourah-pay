@@ -1,0 +1,105 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Backoffice | إدارة الأعضاء{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+    <h2 class="display-4 text-center my-5">إدارة الأعضاء | Member management</h2>
+
+    {% for message in app.flashes('success1') %}
+    
+        <div class="col-md-4 alert alert-secondary text-center p-2 mx-auto my-2">
+            {{ message }}
+        </div>
+
+    {% endfor %}
+    
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr class="bg-secondary text-center">
+                <td class="text-light">ID</td>
+                <td class="text-light">الاسم الاول</td>
+                <td class="text-light">اسم العائلة</td>
+                <td class="text-light">الدولة</td>
+                <td class="text-light">المدينة</td>
+                <td class="text-light">العمر</td>
+                <td class="text-light">التعليم</td>
+                <td class="text-light">التخصص الدراسي</td>
+                <td class="text-light">هل تريد الانضمام للجمعية ؟</td>
+                <td class="text-light">البريد الالكتروني </td>
+                <td class="text-light">رقم الجوال</td>
+                <td class="text-light">طريقة التواصل المفضلة</td>
+                <td class="text-light">Statut</td>
+                <td class="text-light">Date</td>
+                <td class="text-light">تعديل</td>
+                <td class="text-light">حذف</td>
+            </tr>
+            {% for oneUser in users %}
+            <tr>
+                <td class="text-center">{{ oneUser.id}}</td>
+                <td class="text-center">{{ oneUser.first}}</td>
+                <td class="text-center">{{ oneUser.last}}</td>
+                <td class="text-center">{{ oneUser.country}}</td>
+                <td class="text-center">{{ oneUser.city}}</td>
+                <td class="text-center">{{ oneUser.age}}</td>
+                <td class="text-center">{{ oneUser.education}}</td>
+                <td class="text-center">{{ oneUser.specialization}}</td>
+                <td class="text-center">{{ oneUser.purpose}}</td>
+                <td class="text-center">{{ oneUser.email}}</td>
+                <td class="text-center">{{ oneUser.phone}}</td>
+                <td class="text-center">{{ oneUser.comunication}}</td>
+                
+                {% if oneUser.roles == ["ROLE_USER"] %}
+                            <td class="text-primary text-center">User</td>
+                        {% else %}
+                            <td>Admin</td>
+                {% endif %}
+                <td class="text-center">{{ oneUser.date|date()}}</td>
+                <td class="p-2">
+                        <a href="{{ path('admin_membres_edit', {'id': oneUser.id})}}?action=edit" class="btn btn-secondary"><i class="fas fa-edit"></i></a>
+                    </td>
+
+                    {% if oneUser.roles == ['ROLE_ADMIN'] %}     
+                        <td class="text-danger">Cannot be deleted</td>
+                    {% else %}
+                        <td><a href="{{ path('admin_membres_remove', {'id': oneUser.id})}}" class="btn btn-danger" onclick="return confirm('هل أنت متأكد من حذف هذا المستخدم');">
+                        <i class="fas fa-trash-alt"></i>
+                        </a></td>
+                    {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+    {# user modification #}
+     {% if request.query.get('action') == 'edit' %}
+        
+        <div class="my-5">
+
+            <h5 class="text-center">Modification User n° <span class="text-primary">{{ user.id }} : {{ user.first }} {{ user.last }}</span></h5>
+
+            <form class="text-center mt-3" method="post">
+                <div class="col-md-4 mx-auto">
+                    <select name="roles" id="roles" class="form-select">
+                        <option value="ROLE_ADMIN">Admin</option>
+                        <option value="ROLE_USER">User</option> 
+                    </select>
+                </div>
+                <div class="col-auto mt-3">
+                    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                </div>
+            </form>
+
+        </div>
+        <hr class="col-12 bg-secondary">
+
+     {% endif %}
+
+</div>
+ 
+<div class="d-flex justify-content-center">
+    {{ knp_pagination_render(users,'admin/membres_pagination.html.twig') }}
+</div> 
+
+{% endblock %}

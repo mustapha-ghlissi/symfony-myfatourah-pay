@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  AUVT | خدماتنا  
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid services_titer">
+    <h1 class="display-2 text-center text-light pt-5">خدمــــاتنا</h1>
+    <p class="text-center text-light services_p">حرصنا منا على تقديم ماهو الافضل للمجتمع</p>
+    <p class="text-center text-light services_p">ودعماً للإبداع و والابتكار نقدم عدة خدمات</p>
+    <p class="text-center text-light services_p">تعمل على إعداد مجتمع تقني متمكن</p>
+</div>
+<div class="container card rounded shadow-lg  my-5">
+    <div class="row my-5"> 
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center my-3">
+            <img class="mx-auto" src="{{ asset('../uploads/icones/conference.png')}}" width="150" alt="">
+            <p class="text-center mt-3">التدريب وورش العمل</p>
+            
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center my-3">
+            <img class="mx-auto"  src="{{ asset('../uploads/icones/developement.png')}}" width="150" alt="">
+            <p class="text-center mt-3">دراسة المنتجات وتصنيعها</p>
+            
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center my-3">
+            <img class="mx-auto" src="{{ asset('../uploads/icones/meeting.png')}}" width="150" alt="">
+            <p class="text-center mt-3">تقديم الخدمات الإستشارية </p>
+            
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center my-3">
+            <img class="mx-auto" src="{{ asset('../uploads/icones/patent_certificate.png')}}" width="150" alt="certificat">
+            <p class="text-center mt-3">الشهادات و التأهيل</p>
+            
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center my-3">
+            <img class="mx-auto" src="{{ asset('../uploads/icones/conference_reunion.png')}}" width="150" alt="conference">
+            <p class="text-center mt-3">ورش العمل والمؤتمرات واللقاءات</p>
+      
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex flex-column text-center my-3">
+            <img class="mx-auto" src="{{ asset('../uploads/icones/handshake.png')}}" width="150" alt="handshake">
+            <p class="text-center">المسرعات وحاضنات الأعمال</p>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+
+{% endblock %}

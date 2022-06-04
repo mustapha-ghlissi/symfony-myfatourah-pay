@@ -1,0 +1,45 @@
+{% extends 'base_admin.html.twig' %}
+
+{% block title %}Backoffice | وعد بالتبرع{% endblock %}
+
+
+{% block body %}
+<div class="container-fluid">
+    <h2 class="display-4 text-center my_5">إدارة تعهد التبرع</h2>
+</div>
+<div class="container">
+
+    <table class="table-bordered table text-center mx-auto mt-5">
+        <tr class="text-center bg-secondary text-light">
+            <td>ID</td>
+            <td>First name</td>
+            <td>Last name</td>
+            <td>Email</td>
+            <td>Phone</td>
+            <td>Promise done</td>
+            <td>Date</td>
+            <td>Statute</td> 
+        </tr>
+    {% for onePromise in promiseBDD %}
+        <tr>
+            <td>{{ onePromise.id}}</td>
+            <td>{{ onePromise.user.first }}</td>
+            <td>{{ onePromise.user.last}}</td>
+            <td>{{ onePromise.user.email}}</td>
+            <td>{{ onePromise.user.phone}}</td>
+            <td>{{ onePromise.amount}}</td>
+            <td>{{ onePromise.date|date()}}</td>
+            <td><select class="form-select" name="statut" id="">
+                <option value="">Awaiting payment</option>
+                <option value="">Paid</option>
+            </select></td>
+        </tr>
+    {% endfor %}
+    </table>
+</div>
+
+<div class="d-flex justify-content-center">
+    {{ knp_pagination_render(promiseBDD,'admin/promise_pagination.html.twig') }}
+</div> 
+
+{% endblock %}

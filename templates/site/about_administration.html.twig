@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  AUVT |  مجلس الإدارة 
+{% endblock %}
+
+{% block body %}
+
+<div class="container-fluid about_titer">
+    <h1 class="display-3 text-center text-light pt-5">أعضاء مجلس الإدارة</h1>
+</div>
+<div class="container text-center">
+    <div class="d-flex flex-column mx-auto">
+        <img class="rounded-circle shadow-lg mx-auto mt-5" src="{{ asset('../uploads/administration/president_asag.jpg')}}" width="250" alt="رئيس مجلس الإدارة
+الأستاذ/ عدنان سالم الغامدي">
+        <p class="col-lg-3 mt-3 mx-auto about_name">رئيس مجلس الإدارة
+الأستاذ/ عدنان سالم الغامدي</p>
+        <p class="col-lg-3 mx-auto about_p">مستشار مساعد رئيس الهيئة العامة للطيران المدني
+مدير المشروع الوطني لخدمات الطائرات بدون طيار</p>
+    </div>
+</div>
+<div class="container text-center col-xl-10 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-3 d-flex flex-column">
+            <img class="rounded-circle shadow-lg mx-auto mt-5" src="{{ asset('../uploads/administration/vice_presid_hamaj2.jpeg')}}" width="200" alt=" نائب رئيس مجلس الإدارة
+الأستاذ/ هيثم عبدالمحسن الجحدلي">
+            <p class="mt-3 mx-auto about_name"> نائب رئيس مجلس الإدارة
+الأستاذ/ هيثم عبدالمحسن الجحدلي</p>
+            <p class="mx-auto about_p">مشرف العمليات البحرية
+جامعة الملك عبدالله للعلوم والتقنية</p>
+        </div>
+        <div class="col-xl-3 d-flex flex-column">
+            <img class="rounded-circle shadow-lg mx-auto mt-5" src="{{ asset('../uploads/administration/superviseur_yram.jpg')}}" width="200" alt="المشرف المالي
+دكتور/ ياسر رزقان المطيري">
+            <p class="mt-3 mx-auto about_name">المشرف المالي
+دكتور/ ياسر رزقان المطيري</p>
+            <p class="mx-auto about_p">مدير إدارة العمليات الرقمية لمشاريع الحرمين الشريفين بمجموعة بن لادن </p>
+        </div>
+    </div>
+</div>
+<div class="container text-center col-xl-10 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-3 d-flex flex-column"> 
+            <img class="rounded-circle shadow-lg mx-auto mt-5" src="{{ asset('../uploads/administration/membre_conseil_aimm2.jpeg')}}" width="200" alt="عضو مجلس إدارة
+الدكتور / عبدالاله محمد مايت">
+            <p class="mt-3 mx-auto about_name"> عضو مجلس إدارة
+الدكتور / عبدالاله محمد مايت</p>
+            <p class="mx-auto about_p">أستاذ مساعد في قسم الهندسة الكهربائية في جامعة الملك خالد
+رئيس قسم البحوث في كلية الهندسة
+</p>
+        </div>
+        <div class="col-xl-3 d-flex flex-column">
+            <img class="rounded-circle shadow-lg mx-auto mt-5" src="{{ asset('../uploads/administration/membre_conseil_armah.jpg')}}" width="200" alt="عضو مجلس إدارة
+المهندس / عبد الرزاق محمد الحربي
+">
+            <p class="mt-3 mx-auto about_name">عضو مجلس إدارة
+المهندس / عبد الرزاق محمد الحربي
+</p>
+            <p class="mx-auto about_p">مشرف جودة التقنيات الأمنية
+جامعة الملك عبد الله للعلوم والتقنية
+</p>
+        </div> 
+    </div>
+</div>
+
+{% endblock %}
